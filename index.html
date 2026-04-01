@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Del Este Home | Catalogo Visual</title>
+  <meta name="description" content="Cortinas, toldos, fundas y soluciones a medida para transformar tus espacios." />
+  <meta property="og:title" content="Del Este Home | Catalogo Visual" />
+  <meta property="og:description" content="Cortinas, toldos, fundas y soluciones a medida para transformar tus espacios." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://freeimage.host/i/BqhJO3G" />
+  <meta name="theme-color" content="#d9ccb8" />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --bg-soft: #efe6da;
+      --surface: #ffffff;
+      --text: #2f2923;
+      --muted: #6f665d;
+      --line: rgba(47, 41, 35, 0.12);
+      --accent: #a48969;
+      --accent-2: #d8c4aa;
+      --footer: #221d19;
+      --footer-text: #e8dccd;
+      --shadow: 0 18px 40px rgba(25, 20, 16, 0.08);
+    }
+
+    body.dark {
+      --bg: #151311;
+      --bg-soft: #1d1916;
+      --surface: #211c18;
+      --text: #f1e8dc;
+      --muted: #b9ad9f;
+      --line: rgba(241, 232, 220, 0.12);
+      --accent: #d4b38a;
+      --accent-2: #5a4937;
+      --footer: #0f0d0b;
+      --footer-text: #e9dcc9;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: var(--surface);
+      padding: 6px;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    .nav a:hover { color: var(--text); }
+
+    .theme-toggle,
+    .menu-toggle {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .menu-toggle { display: none; }
+
+    .hero {
+      padding: 38px 0 26px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1.2fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .hero-copy {
+      padding: 14px 0;
+      align-self: center;
+    }
+
+    .hero-kicker {
+      color: var(--accent);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .hero-media {
+      background: var(--surface);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .hero-media img {
+      width: 100%;
+      aspect-ratio: 4 / 4.2;
+      object-fit: contain;
+      background: #ece4d8;
+    }
+
+    .hero-media-caption {
+      padding: 14px 16px 18px;
+      border-top: 1px solid var(--line);
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 28px 0 16px;
+    }
+
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.6rem, 2.6vw, 2.6rem);
+      letter-spacing: -0.04em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .banner {
+      margin-bottom: 20px;
+      background: var(--surface);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .banner img {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      object-fit: cover;
+    }
+
+    .banner-copy {
+      padding: 20px;
+    }
+
+    .banner-copy h3 {
+      margin: 0 0 8px;
+      font-size: clamp(1.4rem, 2.1vw, 2rem);
+      letter-spacing: -0.03em;
+    }
+
+    .banner-copy p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .catalog-item {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      color: inherit;
+      width: 100%;
+    }
+
+    .catalog-image-wrap {
+      background: var(--surface);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .catalog-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3.1;
+      object-fit: contain;
+      background: linear-gradient(180deg, var(--bg-soft), var(--surface));
+      transition: transform 0.35s ease;
+    }
+
+    .catalog-item:hover img { transform: scale(1.02); }
+
+    .catalog-copy {
+      padding: 14px 8px 4px;
+    }
+
+    .catalog-copy h4 {
+      margin: 0 0 6px;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+
+    .catalog-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .measure-block {
+      margin-top: 28px;
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--surface) 75%, var(--bg-soft)));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .measure-block h3,
+    .cta-box h3 {
+      margin: 0 0 10px;
+      font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+      letter-spacing: -0.03em;
+    }
+
+    .measure-block p,
+    .cta-box p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .cta-box {
+      margin: 28px 0 18px;
+      padding: 30px;
+      border-radius: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .contact-chip {
+      padding: 16px 18px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 78%, var(--bg-soft));
+    }
+
+    .contact-chip small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    .contact-chip strong {
+      font-size: 1rem;
+      word-break: break-word;
+    }
+
+    .site-footer {
+      margin-top: 24px;
+      background: var(--footer);
+      color: var(--footer-text);
+      padding: 28px 0 88px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      margin: 0;
+      color: rgba(232, 220, 205, 0.8);
+    }
+
+    .footer-inner a span { color: var(--accent); font-weight: 700; }
+
+    .wa-float {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 30;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #25d366;
+      box-shadow: 0 16px 30px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .wa-float:hover { transform: translateY(-2px); }
+
+    .wa-float img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 7, 7, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.25s ease;
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox-inner {
+      width: min(1200px, 100%);
+      max-height: 100%;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 14px;
+    }
+
+    .lightbox-media {
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-media img {
+      max-width: 100%;
+      max-height: 78vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .lightbox-caption {
+      color: #f5efe6;
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .lightbox-caption h4 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+    }
+
+    .lightbox-caption p {
+      margin: 0;
+      color: rgba(245, 239, 230, 0.82);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .contact-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        position: fixed;
+        top: 77px;
+        left: 14px;
+        right: 14px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: 0.2s ease;
+      }
+
+      .nav.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .menu-toggle { display: inline-flex; }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        min-height: 72px;
+      }
+
+      .brand img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .hero {
+        padding-top: 26px;
+      }
+
+      .hero-media img {
+        aspect-ratio: 4 / 4.6;
+      }
+
+      .banner img {
+        aspect-ratio: 4 / 3.3;
+      }
+
+      .measure-block,
+      .cta-box {
+        padding: 22px;
+      }
+
+      .site-footer {
+        padding-bottom: 108px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">
+        <img src="https://freeimage.host/i/BqXQm12" alt="Logo Del Este Home" />
+        <div class="brand-text">
+          <strong>DEL ESTE HOME</strong>
+          <span>Catalogo visual</span>
+        </div>
+      </a>
+
+      <div class="nav-wrap">
+        <nav class="nav" id="siteNav">
+          <a href="#diseno">Diseño</a>
+          <a href="#interiores">Interiores</a>
+          <a href="#exteriores">Exteriores</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">◐</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="hero-kicker">Del Este Home</span>
+          <h1>Cortinas, toldos, fundas y soluciones a medida para transformar tus espacios.</h1>
+          <p>Un recorrido visual pensado para mostrar diseño, interiorismo y exteriores con una presentacion limpia, elegante y directa.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#diseno">Ver catalogo</a>
+            <a class="btn" href="https://wa.me/5491134178105" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+          <img src="https://freeimage.host/i/BqhJO3G" alt="Ambiente principal Del Este Home" />
+          <figcaption class="hero-media-caption">Cortinas, toldos, fundas y propuestas visuales para ambientes pensados a medida.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="diseno">
+      <div class="container">
+        <div class="banner">
+          <img src="https://freeimage.host/i/BqOxqFf" alt="Diseño y espacios funcionales" />
+          <div class="banner-copy">
+            <h3>Diseño</h3>
+            <p>Detalles, terminaciones y soluciones pensadas para acompañar cada ambiente con equilibrio, luz y estilo.</p>
+          </div>
+        </div>
+
+        <div class="catalog-grid">
+          <button class="catalog-item" data-title="Cortinas" data-desc="Textiles que acompañan la luz y el estilo del ambiente." data-img="https://freeimage.host/i/BqNq8vt">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/BqNq8vt" alt="Cortinas" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Cortinas</h4>
+              <p>Textiles que acompañan la luz y el estilo del ambiente.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Cenefa de madera" data-desc="Terminaciones decorativas para realzar cada ventana." data-img="https://freeimage.host/i/BqNqSyX">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/BqNqSyX" alt="Cenefa de madera" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Cenefa de madera</h4>
+              <p>Terminaciones decorativas para realzar cada ventana.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Roller sunscreen" data-desc="Una opcion practica y moderna para filtrar luz con elegancia." data-img="https://freeimage.host/i/Bqh59Ve">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/Bqh59Ve" alt="Roller sunscreen" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Roller sunscreen</h4>
+              <p>Una opcion practica y moderna para filtrar luz con elegancia.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Bandas verticales blackout" data-desc="Privacidad, control de luz y terminacion prolija." data-img="https://freeimage.host/i/Bqh59Ve">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/Bqh59Ve" alt="Bandas verticales blackout" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Bandas verticales blackout</h4>
+              <p>Privacidad, control de luz y terminacion prolija.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Roller con diseño" data-desc="Funcionalidad y personalidad en una misma solucion." data-img="https://freeimage.host/i/BqjlrQV">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/BqjlrQV" alt="Roller con diseño" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Roller con diseño</h4>
+              <p>Funcionalidad y personalidad en una misma solucion.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="interiores">
+      <div class="container">
+        <div class="banner">
+          <img src="https://freeimage.host/i/BqO5pI4" alt="Interiores Del Este Home" />
+          <div class="banner-copy">
+            <h3>Interiores</h3>
+            <p>Textiles, fundas y propuestas a medida para lograr espacios mas comodos, calidos y armoniosos.</p>
+          </div>
+        </div>
+
+        <div class="catalog-grid">
+          <button class="catalog-item" data-title="Fundas para sillones" data-desc="Renova y protege tus espacios con opciones a medida." data-img="https://freeimage.host/i/Bqw5Ega">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/Bqw5Ega" alt="Fundas para sillones" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Fundas para sillones</h4>
+              <p>Renova y protege tus espacios con opciones a medida.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Interiorismo" data-desc="Detalles que ordenan, acompañan y transforman el ambiente." data-img="https://freeimage.host/i/Bqwl1Hu">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/Bqwl1Hu" alt="Interiorismo" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Interiorismo</h4>
+              <p>Detalles que ordenan, acompañan y transforman el ambiente.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Fundas y textiles" data-desc="Opciones pensadas para acompañar el uso diario con una presencia visual prolija y calida." data-img="https://freeimage.host/i/Bqw5z0u">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/Bqw5z0u" alt="Fundas y textiles" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Fundas y textiles</h4>
+              <p>Opciones pensadas para acompañar el uso diario con una presencia visual prolija y calida.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="exteriores">
+      <div class="container">
+        <div class="banner">
+          <img src="https://freeimage.host/i/BqeJGsV" alt="Exteriores Del Este Home" />
+          <div class="banner-copy">
+            <h3>Exteriores</h3>
+            <p>Opciones funcionales y esteticas para disfrutar galerias, patios y espacios integrados con mas confort.</p>
+          </div>
+        </div>
+
+        <div class="catalog-grid">
+          <button class="catalog-item" data-title="Toldos" data-desc="Confort exterior y mejor aprovechamiento del espacio." data-img="https://freeimage.host/i/BqNz7ZF">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/BqNz7ZF" alt="Toldos" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Toldos</h4>
+              <p>Confort exterior y mejor aprovechamiento del espacio.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Jardin de invierno" data-desc="Ideas para conectar interior y exterior con mas calidez y diseño." data-img="https://freeimage.host/i/BqeJGsV">
+            <div class="catalog-image-wrap">
+              <img src="https://freeimage.host/i/BqeJGsV" alt="Jardin de invierno" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Jardin de invierno</h4>
+              <p>Ideas para conectar interior y exterior con mas calidez y diseño.</p>
+            </div>
+          </button>
+        </div>
+
+        <div class="measure-block">
+          <h3>Trabajos a medida</h3>
+          <p>Cada espacio tiene su propia necesidad. En Del Este Home trabajamos con propuestas personalizadas para acompañar la funcionalidad y la estetica de cada ambiente.</p>
+        </div>
+
+        <div class="cta-box" id="contacto">
+          <h3>Tu espacio tambien puede verse asi</h3>
+          <p>Si queres asesoramiento o una propuesta a medida, escribinos por WhatsApp y vemos juntos la mejor opcion.</p>
+          <div class="cta-actions">
+            <a class="btn primary" href="https://wa.me/5491134178105" target="_blank" rel="noopener noreferrer">Consultar ahora</a>
+            <a class="btn" href="https://www.instagram.com/delestehome/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
+          </div>
+          <div class="contact-meta">
+            <div class="contact-chip">
+              <small>WhatsApp</small>
+              <strong>+54 9 11 3417-8105</strong>
+            </div>
+            <div class="contact-chip">
+              <small>Ubicacion</small>
+              <strong>Estacion Pilar</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Del Este Home · Catalogo visual de ambientes y soluciones a medida.</p>
+      <a href="https://ciborg347oficial.onrender.com" target="_blank" rel="noopener noreferrer">Creado y diseñado por <span>Ciborg 347</span></a>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5491134178105" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+    <img src="https://iili.io/BdFrUs1.webp" alt="WhatsApp" />
+  </a>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">✕</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-media">
+        <img id="lightboxImg" src="" alt="" />
+      </div>
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle"></h4>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const body = document.body;
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('siteNav');
+    const themeToggle = document.getElementById('themeToggle');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const catalogItems = document.querySelectorAll('.catalog-item');
+    const footer = document.querySelector('.site-footer');
+    const waFloat = document.querySelector('.wa-float');
+
+    menuToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('open');
+      menuToggle.textContent = siteNav.classList.contains('open') ? '✕' : '☰';
+    });
+
+    siteNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('open');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    const savedTheme = localStorage.getItem('deleste-theme');
+    if (savedTheme === 'dark') body.classList.add('dark');
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('deleste-theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    function openLightbox(img, title, desc) {
+      lightboxImg.src = img;
+      lightboxImg.alt = title;
+      lightboxTitle.textContent = title;
+      lightboxDesc.textContent = desc;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      body.style.overflow = '';
+    }
+
+    catalogItems.forEach(item => {
+      item.addEventListener('click', () => {
+        openLightbox(item.dataset.img, item.dataset.title, item.dataset.desc);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          waFloat.style.opacity = '0';
+          waFloat.style.pointerEvents = 'none';
+          waFloat.style.transform = 'translateY(12px)';
+        } else {
+          waFloat.style.opacity = '1';
+          waFloat.style.pointerEvents = 'auto';
+          waFloat.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(footer);
+  </script>
+</body>
+</html>
