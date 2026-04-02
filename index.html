@@ -8,7 +8,7 @@
   <meta property="og:title" content="Del Este Home | Catalogo Visual" />
   <meta property="og:description" content="Cortinas, toldos, fundas y soluciones a medida para transformar tus espacios." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://freeimage.host/i/BqhJO3G" />
+  <meta property="og:image" content="https://iili.io/BqhJO3G.png" />
   <meta name="theme-color" content="#d9ccb8" />
   <style>
     :root {
@@ -156,7 +156,12 @@
     .menu-toggle { display: none; }
 
     .hero {
+      position: relative;
       padding: 38px 0 26px;
+      background-image: linear-gradient(rgba(20, 16, 12, 0.48), rgba(20, 16, 12, 0.48)), url('https://iili.io/BqgeN44.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .hero-grid {
@@ -169,10 +174,11 @@
     .hero-copy {
       padding: 14px 0;
       align-self: center;
+      color: #fff;
     }
 
     .hero-kicker {
-      color: var(--accent);
+      color: #ffffff;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       font-size: 0.8rem;
@@ -182,6 +188,8 @@
 
     .hero h1 {
       margin: 0 0 14px;
+      color: #ffffff;
+      text-shadow: 0 8px 22px rgba(0,0,0,0.42);
       font-size: clamp(2rem, 4vw, 4.2rem);
       line-height: 0.98;
       letter-spacing: -0.04em;
@@ -190,7 +198,8 @@
     .hero p {
       margin: 0;
       max-width: 540px;
-      color: var(--muted);
+      color: rgba(255, 255, 255, 0.96);
+      text-shadow: 0 4px 16px rgba(0,0,0,0.35);
       font-size: 1.05rem;
     }
 
@@ -223,25 +232,37 @@
     }
 
     .hero-media {
-      background: var(--surface);
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
+      background: transparent;
+      border-radius: 0;
+      overflow: visible;
+      box-shadow: none;
+      border: 0;
     }
 
-    .hero-media img {
+    .hero-media-display {
       width: 100%;
-      aspect-ratio: 4 / 4.2;
-      object-fit: contain;
-      background: #ece4d8;
+      min-height: clamp(260px, 34vw, 420px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(12px, 2vw, 20px);
+      background: transparent;
+      text-align: center;
+    }
+
+    .hero-media-display span {
+      display: block;
+      font-size: clamp(1.5rem, 4.4vw, 3.2rem);
+      line-height: 0.96;
+      letter-spacing: 0.1em;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      word-break: break-word;
     }
 
     .hero-media-caption {
-      padding: 14px 16px 18px;
-      border-top: 1px solid var(--line);
-      font-size: 0.95rem;
-      color: var(--muted);
+      display: none;
     }
 
     .section {
@@ -346,6 +367,15 @@
       margin: 0;
       color: var(--muted);
       font-size: 0.95rem;
+    }
+
+
+    .intro-cut {
+      padding: 34px 0 8px;
+    }
+
+    .intro-cut .measure-block {
+      margin-top: 0;
     }
 
     .measure-block {
@@ -588,8 +618,12 @@
         padding-top: 26px;
       }
 
-      .hero-media img {
-        aspect-ratio: 4 / 4.6;
+      .hero-media-display {
+        min-height: 220px;
+      }
+
+      .hero-cut {
+        padding: 16px 18px;
       }
 
       .banner img {
@@ -611,7 +645,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#inicio" class="brand">
-        <img src="https://freeimage.host/i/BqXQm12" alt="Logo Del Este Home" />
+        <img src="https://iili.io/BqXQm12.png" alt="Logo Del Este Home" />
         <div class="brand-text">
           <strong>DEL ESTE HOME</strong>
           <span>Catalogo visual</span>
@@ -637,7 +671,6 @@
         <div class="hero-copy">
           <span class="hero-kicker">Del Este Home</span>
           <h1>Cortinas, toldos, fundas y soluciones a medida para transformar tus espacios.</h1>
-          <p>Un recorrido visual pensado para mostrar diseño, interiorismo y exteriores con una presentacion limpia, elegante y directa.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#diseno">Ver catalogo</a>
             <a class="btn" href="https://wa.me/5491134178105" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
@@ -645,16 +678,26 @@
         </div>
 
         <figure class="hero-media">
-          <img src="https://freeimage.host/i/BqhJO3G" alt="Ambiente principal Del Este Home" />
+          <div class="hero-media-display" aria-label="Del Este Home">
+            <span>DELESTE HOME</span>
+          </div>
           <figcaption class="hero-media-caption">Cortinas, toldos, fundas y propuestas visuales para ambientes pensados a medida.</figcaption>
         </figure>
+      </div>
+</section>
+
+    <section class="intro-cut" aria-label="Introduccion visual">
+      <div class="container">
+        <div class="measure-block">
+          <p>Un recorrido visual donde cada seccion muestra distintas formas de acompañar interiores y exteriores con soluciones pensadas a medida, sin recargar la experiencia y dejando que las imagenes respiren mejor.</p>
+        </div>
       </div>
     </section>
 
     <section class="section" id="diseno">
       <div class="container">
         <div class="banner">
-          <img src="https://freeimage.host/i/BqOxqFf" alt="Diseño y espacios funcionales" />
+          <img src="https://iili.io/BqOxqFf.jpg" alt="Diseño y espacios funcionales" />
           <div class="banner-copy">
             <h3>Diseño</h3>
             <p>Detalles, terminaciones y soluciones pensadas para acompañar cada ambiente con equilibrio, luz y estilo.</p>
@@ -662,9 +705,9 @@
         </div>
 
         <div class="catalog-grid">
-          <button class="catalog-item" data-title="Cortinas" data-desc="Textiles que acompañan la luz y el estilo del ambiente." data-img="https://freeimage.host/i/BqNq8vt">
+          <button class="catalog-item" data-title="Cortinas" data-desc="Textiles que acompañan la luz y el estilo del ambiente." data-img="https://iili.io/BqNq8vt.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/BqNq8vt" alt="Cortinas" />
+              <img src="https://iili.io/BqNq8vt.png" alt="Cortinas" />
             </div>
             <div class="catalog-copy">
               <h4>Cortinas</h4>
@@ -672,9 +715,9 @@
             </div>
           </button>
 
-          <button class="catalog-item" data-title="Cenefa de madera" data-desc="Terminaciones decorativas para realzar cada ventana." data-img="https://freeimage.host/i/BqNqSyX">
+          <button class="catalog-item" data-title="Cenefa de madera" data-desc="Terminaciones decorativas para realzar cada ventana." data-img="https://iili.io/BqNqSyX.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/BqNqSyX" alt="Cenefa de madera" />
+              <img src="https://iili.io/BqNqSyX.png" alt="Cenefa de madera" />
             </div>
             <div class="catalog-copy">
               <h4>Cenefa de madera</h4>
@@ -682,9 +725,9 @@
             </div>
           </button>
 
-          <button class="catalog-item" data-title="Roller sunscreen" data-desc="Una opcion practica y moderna para filtrar luz con elegancia." data-img="https://freeimage.host/i/Bqh59Ve">
+          <button class="catalog-item" data-title="Roller sunscreen" data-desc="Una opcion practica y moderna para filtrar luz con elegancia." data-img="https://iili.io/BqvF0y7.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/Bqh59Ve" alt="Roller sunscreen" />
+              <img src="https://iili.io/BqvF0y7.png" alt="Roller sunscreen" />
             </div>
             <div class="catalog-copy">
               <h4>Roller sunscreen</h4>
@@ -692,9 +735,9 @@
             </div>
           </button>
 
-          <button class="catalog-item" data-title="Bandas verticales blackout" data-desc="Privacidad, control de luz y terminacion prolija." data-img="https://freeimage.host/i/Bqh59Ve">
+          <button class="catalog-item" data-title="Bandas verticales blackout" data-desc="Privacidad, control de luz y terminacion prolija." data-img="https://iili.io/Bqh59Ve.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/Bqh59Ve" alt="Bandas verticales blackout" />
+              <img src="https://iili.io/Bqh59Ve.png" alt="Bandas verticales blackout" />
             </div>
             <div class="catalog-copy">
               <h4>Bandas verticales blackout</h4>
@@ -702,9 +745,9 @@
             </div>
           </button>
 
-          <button class="catalog-item" data-title="Roller con diseño" data-desc="Funcionalidad y personalidad en una misma solucion." data-img="https://freeimage.host/i/BqjlrQV">
+          <button class="catalog-item" data-title="Roller con diseño" data-desc="Funcionalidad y personalidad en una misma solucion." data-img="https://iili.io/BqjlrQV.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/BqjlrQV" alt="Roller con diseño" />
+              <img src="https://iili.io/BqjlrQV.png" alt="Roller con diseño" />
             </div>
             <div class="catalog-copy">
               <h4>Roller con diseño</h4>
@@ -718,7 +761,7 @@
     <section class="section" id="interiores">
       <div class="container">
         <div class="banner">
-          <img src="https://freeimage.host/i/BqO5pI4" alt="Interiores Del Este Home" />
+          <img src="https://iili.io/BqO5pI4.jpg" alt="Interiores Del Este Home" />
           <div class="banner-copy">
             <h3>Interiores</h3>
             <p>Textiles, fundas y propuestas a medida para lograr espacios mas comodos, calidos y armoniosos.</p>
@@ -726,9 +769,9 @@
         </div>
 
         <div class="catalog-grid">
-          <button class="catalog-item" data-title="Fundas para sillones" data-desc="Renova y protege tus espacios con opciones a medida." data-img="https://freeimage.host/i/Bqw5Ega">
+          <button class="catalog-item" data-title="Fundas para sillones" data-desc="Renova y protege tus espacios con opciones a medida." data-img="https://iili.io/Bqw5z0u.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/Bqw5Ega" alt="Fundas para sillones" />
+              <img src="https://iili.io/Bqw5z0u.png" alt="Fundas para sillones" />
             </div>
             <div class="catalog-copy">
               <h4>Fundas para sillones</h4>
@@ -736,23 +779,13 @@
             </div>
           </button>
 
-          <button class="catalog-item" data-title="Interiorismo" data-desc="Detalles que ordenan, acompañan y transforman el ambiente." data-img="https://freeimage.host/i/Bqwl1Hu">
+          <button class="catalog-item" data-title="Interiorismo" data-desc="Detalles que ordenan, acompañan y transforman el ambiente." data-img="https://iili.io/Bqwl1Hu.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/Bqwl1Hu" alt="Interiorismo" />
+              <img src="https://iili.io/Bqwl1Hu.png" alt="Interiorismo" />
             </div>
             <div class="catalog-copy">
               <h4>Interiorismo</h4>
               <p>Detalles que ordenan, acompañan y transforman el ambiente.</p>
-            </div>
-          </button>
-
-          <button class="catalog-item" data-title="Fundas y textiles" data-desc="Opciones pensadas para acompañar el uso diario con una presencia visual prolija y calida." data-img="https://freeimage.host/i/Bqw5z0u">
-            <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/Bqw5z0u" alt="Fundas y textiles" />
-            </div>
-            <div class="catalog-copy">
-              <h4>Fundas y textiles</h4>
-              <p>Opciones pensadas para acompañar el uso diario con una presencia visual prolija y calida.</p>
             </div>
           </button>
         </div>
@@ -762,7 +795,7 @@
     <section class="section" id="exteriores">
       <div class="container">
         <div class="banner">
-          <img src="https://freeimage.host/i/BqeJGsV" alt="Exteriores Del Este Home" />
+          <img src="https://iili.io/BqeJGsV.jpg" alt="Exteriores Del Este Home" />
           <div class="banner-copy">
             <h3>Exteriores</h3>
             <p>Opciones funcionales y esteticas para disfrutar galerias, patios y espacios integrados con mas confort.</p>
@@ -770,9 +803,9 @@
         </div>
 
         <div class="catalog-grid">
-          <button class="catalog-item" data-title="Toldos" data-desc="Confort exterior y mejor aprovechamiento del espacio." data-img="https://freeimage.host/i/BqNz7ZF">
+          <button class="catalog-item" data-title="Toldos" data-desc="Confort exterior y mejor aprovechamiento del espacio." data-img="https://iili.io/Bqv5rVR.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/BqNz7ZF" alt="Toldos" />
+              <img src="https://iili.io/Bqv5rVR.png" alt="Toldos" />
             </div>
             <div class="catalog-copy">
               <h4>Toldos</h4>
@@ -780,13 +813,36 @@
             </div>
           </button>
 
-          <button class="catalog-item" data-title="Jardin de invierno" data-desc="Ideas para conectar interior y exterior con mas calidez y diseño." data-img="https://freeimage.host/i/BqeJGsV">
+          <button class="catalog-item" data-title="Toldos" data-desc="Otra vista para seguir mostrando soluciones exteriores sin reemplazar la imagen original." data-img="https://iili.io/Bq82I7S.png">
             <div class="catalog-image-wrap">
-              <img src="https://freeimage.host/i/BqeJGsV" alt="Jardin de invierno" />
+              <img src="https://iili.io/Bq82I7S.png" alt="Toldos exteriores" />
             </div>
             <div class="catalog-copy">
-              <h4>Jardin de invierno</h4>
-              <p>Ideas para conectar interior y exterior con mas calidez y diseño.</p>
+              <h4>Toldos</h4>
+              <p>Otra vista para seguir mostrando soluciones exteriores sin reemplazar la imagen original.</p>
+            </div>
+          </button>
+        </div>
+
+
+        <div class="catalog-grid" style="margin-top: 18px;">
+          <button class="catalog-item" data-title="Ambiente exterior" data-desc="Una imagen de apoyo para seguir mostrando espacios integrados con una presencia visual limpia." data-img="https://iili.io/BqvGhiu.png">
+            <div class="catalog-image-wrap">
+              <img src="https://iili.io/BqvGhiu.png" alt="Ambiente exterior" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Ambiente exterior</h4>
+              <p>Una imagen de apoyo para seguir mostrando espacios integrados con una presencia visual limpia.</p>
+            </div>
+          </button>
+
+          <button class="catalog-item" data-title="Galeria final" data-desc="Otra vista de apoyo para completar el recorrido visual de la marca sin repetir fotos." data-img="https://iili.io/BqvGMD7.png">
+            <div class="catalog-image-wrap">
+              <img src="https://iili.io/BqvGMD7.png" alt="Galeria final Del Este Home" />
+            </div>
+            <div class="catalog-copy">
+              <h4>Galeria final</h4>
+              <p>Otra vista de apoyo para completar el recorrido visual de la marca sin repetir fotos.</p>
             </div>
           </button>
         </div>
